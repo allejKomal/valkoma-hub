@@ -1,5 +1,4 @@
 // components/Home.tsx
-import { Content } from "@/components/design-system/content";
 import { MoveUpRight } from "lucide-react";
 import { Badge, Button } from "valkoma-package/primitive";
 import { useNavigate } from "react-router-dom";
@@ -22,8 +21,8 @@ function BlogCard({ title, date, description, tags, url }: BlogCardProps) {
         <div className="flex items-center justify-between pr-10 border-b">
             <div className="rounded-md p-6 flex flex-col gap-2 w-[800px]">
                 <p className="text-sm text-muted-foreground font-medium">{date}</p>
-                <Content type="header2">{title}</Content>
-                <Content type="description">{description}</Content>
+                <span className="text-xl font-medium">{title}</span>
+                <span className="text-sm mb-4">{description}</span>
                 <div className="flex gap-2 -mt-2">
                     {tags.map((tag) => (
                         <Badge variant="secondary" key={tag} className="uppercase">
